@@ -58,7 +58,9 @@ void setup()
 
 void saveMeasurementToFile(int m_id, float hum, float temp, int r, int g, int b) {
     m_id++;
-    File myFile = SD.open("measurement" + m_id + ".json", FILE_WRITE); // measurement_1.json => measurement_2020-04-22-17-28-01.11.json
+    char filename[50];
+    sprintf(filename, "measurement_%d.json",m_id");
+    File myFile = SD.open(filename, FILE_WRITE); // measurement_1.json => measurement_2020-04-22-17-28-01.11.json
     char buffer[100];
     sprintf (buffer, "{\"id\": %d, \"hum\": %f, \"temp\": %d, \"light\": { \"r\": %d, \"g\": %d, \b\": %d } }", m_id, hum, temp, r, g, b);
     myFile.print(buffer);
