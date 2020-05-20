@@ -22,8 +22,8 @@ int m_id=0;
 
 
 //DOŁĄCZAM:
-const char *ssid     = "GombaNetwork";
-const char *password = "Wrona#@!123";
+const char *ssid     = "wifi name";
+const char *password = "wifi password";
 
 const long utcOffsetInSeconds = 3600;
 
